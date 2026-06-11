@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0%;
+}

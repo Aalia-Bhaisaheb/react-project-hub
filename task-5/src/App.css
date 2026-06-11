@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "@fontsource/playfair-display";
+@import "@fontsource/inter";
+
+@theme {
+  --font-playfair: "Playfair Display", serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
