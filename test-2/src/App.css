@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+.navbar{
+  background-color: #848484;
+  background: rgba(40, 40, 40, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.logo{
+  margin-left: 165px;
+}
+
+.nav-link-name{
+  color: #F18E38;
+}
+.nav-link-all{
+  margin-left: 252px;
+}
+.register-button{
+  background-color: #F18E38;
+  font-weight: 500;
+}
