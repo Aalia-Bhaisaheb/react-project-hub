@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="bhavnagar_com.client/bhavnagar_com.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="bhavnagar_com.Server/bhavnagar_com.Server.csproj" />
+</Solution>

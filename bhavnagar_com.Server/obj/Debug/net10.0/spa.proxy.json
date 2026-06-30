@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:29316",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "D:\\react\\bhavnagar_com\\bhavnagar_com.Server\\..\\bhavnagar_com.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

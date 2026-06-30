@@ -1,0 +1,212 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --background: 36 33% 98%;
+        --foreground: 222 25% 14%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 25% 14%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 25% 14%;
+        --primary: 224 47% 21%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 36 33% 96%;
+        --secondary-foreground: 224 47% 21%;
+        --muted: 36 20% 94%;
+        --muted-foreground: 220 9% 46%;
+        --accent: 39 47% 56%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 224 47% 21%;
+        --radius: 0.75rem;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Outfit", system-ui, -apple-system, sans-serif;
+        background: #fdfbf7;
+        color: #1f2937;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+
+    ::selection {
+        background: #1c2a4f;
+        color: #fdfbf7;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Cormorant Garamond", serif;
+    }
+
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+        [data-debug-wrapper="true"] > * {
+            margin-left: inherit;
+            margin-right: inherit;
+            margin-top: inherit;
+            margin-bottom: inherit;
+            padding-left: inherit;
+            padding-right: inherit;
+            padding-top: inherit;
+            padding-bottom: inherit;
+            column-gap: inherit;
+            row-gap: inherit;
+            gap: inherit;
+            border-left-width: inherit;
+            border-right-width: inherit;
+            border-top-width: inherit;
+            border-bottom-width: inherit;
+            border-left-style: inherit;
+            border-right-style: inherit;
+            border-top-style: inherit;
+            border-bottom-style: inherit;
+            border-left-color: inherit;
+            border-right-color: inherit;
+            border-top-color: inherit;
+            border-bottom-color: inherit;
+        }
+}
+
+@layer components {
+    .container-bn {
+        max-width: 80rem;
+        margin-inline: auto;
+        padding-inline: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+        .container-bn {
+            padding-inline: 2rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container-bn {
+            padding-inline: 3rem;
+        }
+    }
+
+    .label-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.28em;
+        color: #c5a059;
+    }
+
+        .label-eyebrow::before {
+            content: "";
+            display: inline-block;
+            width: 2rem;
+            height: 1px;
+            background: rgba(197, 160, 89, 0.8);
+        }
+
+    .btn-primary,
+    .btn-gold,
+    .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.875rem 1.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btn-primary {
+        background: #1c2a4f;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(28, 42, 79, 0.18);
+    }
+
+        .btn-primary:hover {
+            background: #243867;
+            box-shadow: 0 12px 30px rgba(28, 42, 79, 0.28);
+        }
+
+    .btn-gold {
+        background: #c5a059;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(197, 160, 89, 0.25);
+    }
+
+        .btn-gold:hover {
+            background: #d3ae66;
+        }
+
+    .btn-ghost {
+        background: transparent;
+        color: #1c2a4f;
+        border: 1px solid rgba(28, 42, 79, 0.15);
+    }
+
+        .btn-ghost:hover {
+            background: rgba(28, 42, 79, 0.05);
+        }
+
+    .glass {
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .heading-display {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 0.95;
+    }
+
+    .heading-italic-accent {
+        font-style: italic;
+        color: #c5a059;
+        font-weight: 400;
+    }
+
+    .scroll-x-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+        .scroll-x-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+    .grain {
+        position: relative;
+    }
+
+        .grain::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            mix-blend-mode: multiply;
+            opacity: 0.5;
+        }
+}
